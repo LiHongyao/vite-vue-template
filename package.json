@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "VITE_CJS_TRACE=true vite --mode dev",
+    "dev": "VITE_CJS_IGNORE_WARNING=true  vite --mode dev",
     "build:qa": "vue-tsc && vite build --mode qa",
     "build:prod": "vue-tsc && vite build --mode prod",
     "preview": "vite preview"
