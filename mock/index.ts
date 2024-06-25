@@ -1,5 +1,5 @@
-// @ts-ignore
-import { mock } from "mockjs";
+import pkg from "mockjs";
+const { mock } = pkg;
 
 export default [
   {
@@ -19,7 +19,7 @@ export default [
               "amount|1-100": 100,
               withdrawTime: '@datetime("yyyy-MM-dd HH:mm")',
             },
-          ]
+          ],
         },
       });
     },
@@ -81,8 +81,7 @@ export default [
               date: "@datetime('yyyy-MM-dd HH:mm:ss')",
               "count|0-1000": 1000,
               "status|1": [0, 1],
-              failMsg:
-                "按理说马拉松山卡拉啦塞拉斯拉拉手了按理说拉伸拉伸拉伸拉上按时",
+              failMsg: "按理说马拉松山卡拉啦塞拉斯拉拉手了按理说拉伸拉伸拉伸拉上按时",
             },
           ],
         },
