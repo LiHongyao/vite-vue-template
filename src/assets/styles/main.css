@@ -623,9 +623,9 @@ input { outline: none; border: none; }
 .text-break    { word-break: break-all; }
 
 /** 文本溢出 **/
-.line-clamp-1 { text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; }
-.line-clamp-2 { text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-.line-clamp-3 { text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.line-clamp-1 { text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; line-clamp: 1; -webkit-line-clamp: 1; overflow: hidden; }
+.line-clamp-2 { text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; line-clamp: 1; -webkit-line-clamp: 2; overflow: hidden; }
+.line-clamp-3 { text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; line-clamp: 1; -webkit-line-clamp: 3; overflow: hidden; }
 
 
 /** 图标尺寸 */
