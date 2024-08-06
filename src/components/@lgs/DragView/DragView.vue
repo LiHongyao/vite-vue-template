@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref, toRefs } from 'vue';
+import { onMounted, reactive, ref, toRefs } from "vue";
 
 interface StateProps {
   sw: number;
@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<{ options?: OptionProps }>(), {
 
 // ==> emits
 const emits = defineEmits<{
-  (e: 'tap'): void;
+  (e: "tap"): void;
 }>();
 
 // ==> state
@@ -105,20 +105,14 @@ onMounted(() => {
   // 更新拖拽元素位置
   state.pos = { ...__pos };
 
-  document.body.addEventListener('touchmove', (e) => e.preventDefault());
+  document.body.addEventListener("touchmove", (e) => e.preventDefault(), { passive: true });
 });
 
 const { pos } = toRefs(state);
 </script>
 
 <template>
-  <div
-    class="lg-drag-view"
-    ref="wrap"
-    :style="{ top: `${pos.y}px`, left: `${pos.x}px` }"
-    @touchmove="onTouchMove"
-    @click="emits('tap')"
-  >
+  <div class="lg-drag-view" ref="wrap" :style="{ top: `${pos.y}px`, left: `${pos.x}px` }" @touchmove.passive="onTouchMove" @click="emits('tap')">
     <slot />
   </div>
 </template>
