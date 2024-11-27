@@ -1,4 +1,5 @@
 import pkg from "mockjs";
+// @ts-ignore
 const { mock } = pkg;
 
 export default [
@@ -39,7 +40,7 @@ export default [
             {
               avatar: "@Image('30x30','@color')",
               nickName: "@cname",
-              "activeStatus|1": [0, 1],
+              activeStatus: '@pick([0, 1])',
             },
           ],
         },
@@ -77,11 +78,11 @@ export default [
           pages: 3,
           "data|15": [
             {
-              "title|1": ["金币大转盘奖励", "好友帮我赚", "金币提现"],
+              title: "@pick(['金币大转盘奖励', '好友帮我赚', '金币提现'])",
               date: "@datetime('yyyy-MM-dd HH:mm:ss')",
-              "count|0-1000": 1000,
-              "status|1": [0, 1],
-              failMsg: "按理说马拉松山卡拉啦塞拉斯拉拉手了按理说拉伸拉伸拉伸拉上按时",
+              count: "@int(0,1000)",
+              status: "@pick([0, 1])",
+              failMsg: "@csentence",
             },
           ],
         },
